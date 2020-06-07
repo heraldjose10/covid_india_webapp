@@ -1,0 +1,1 @@
+from t23 import app as application
