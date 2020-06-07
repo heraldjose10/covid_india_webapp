@@ -1,0 +1,170 @@
+<html>
+    <head>
+        <style>
+            body {
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+nav {
+  background-color: #000;
+  display:block;
+  text-align: center;
+  width: 35cm;
+  height:4cm
+}
+
+nav a {
+  color: #fff;
+  margin: 0 1em;
+  text-decoration: none;
+}
+
+.scrolling-box {
+  background-color: #ffffff;
+  display: block;
+  overflow-y:hidden;
+  text-align: center;
+  height:12.4cm;
+  width: 35cm;
+  border-top-left-radius: 16px;
+      border-bottom-left-radius: 16px;
+      border-bottom-right-radius: 16px;
+      border-top-right-radius: 16px;
+
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.act{
+    border-top-left-radius: 16px;
+      border-bottom-left-radius: 16px;
+      border-bottom-right-radius: 16px;
+      border-top-right-radius: 16px;
+      border: 5px solid white;
+      background-color: white;
+      color: black;
+      width: 4cm;
+      height: 2cm;
+      visibility: visible;
+    position:absolute;
+    left: 6cm;
+    top: 2cm;
+}
+.die{
+    border-top-left-radius: 16px;
+      border-bottom-left-radius: 16px;
+      border-bottom-right-radius: 16px;
+      border-top-right-radius: 16px;
+      border: 5px solid white;
+      background-color: white;
+      color: black;
+      width: 4cm;
+      height: 2cm;
+      visibility: visible;
+    position:absolute;
+    left:15cm;
+    top: 2cm;
+}
+.subhead{
+    font-family: "Corbel";
+      font-size: 20px;
+      border-left: 10px "#E3E1E6 ";
+      letter-spacing: 10px;
+      position: absolute;
+      visibility: visible;
+      left: 495px;
+      top: 633.2px;
+      z-index: 200;
+      color: white;
+}
+.rec{
+    border-top-left-radius: 16px;
+      border-bottom-left-radius: 16px;
+      border-bottom-right-radius: 16px;
+      border-top-right-radius: 16px;
+      border: 5px solid white;
+      background-color: white;
+      color: black;
+      width: 4cm;
+      height: 2cm;
+      visibility: visible;
+    position:absolute;
+    left: 23cm;
+    top: 2cm;
+}
+#y{
+  visibility: visible;
+    position:absolute;
+    left: 500px;
+    top: 390px;
+}
+#x{
+  visibility: visible;
+    position:absolute;
+    left: 865px;
+    top: 390px;
+}
+#z{
+  visibility: visible;
+    position:absolute;
+    left: 115px;
+    top: 390px;
+}
+.lst{
+  color: #fff;
+  visibility: visible;
+    position:absolute;
+    left: 1200px;
+    top: 639px;
+}
+        </style>
+    </head>
+<body>
+    <nav>
+        <a href="#1">
+            <input class="act" type="button" value="Active-Cases">
+        </a>
+        <a href="#2">
+            <input class="die" type="button" value="Deaths">
+        </a>
+        <a href="#3">
+            <input class="rec" type="button" value="Recoveries">
+        </a>
+      </nav>
+      
+      <div class="scrolling-box">
+        <section id="1">
+          <img id="x" src="nurse.jpg">
+          {{ data['active']}}<br><br><br>
+          <b>{{ data['updated']}}</b>
+
+        </section>
+        <section id="2">
+          <img id="y" src="nurse.jpg">
+
+          {{ data['deaths']}}<br><br><br>
+          <b>{{ data['updated']}}</b>
+        </section>
+        <section id="3">
+          <img id="z" src="nurse.jpg">
+          {{ data['recovery']}}<br><br><br>
+          <u class="lst">{{ data['updated']}}</u>
+
+        </section>
+      </div>
+      <div class="subhead">
+        #stayhome #staysafe<br>
+    </div>
+
+
+
+</body>
+</html>

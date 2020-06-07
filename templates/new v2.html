@@ -1,0 +1,143 @@
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Baloo 2' rel='stylesheet'>
+    <style>
+        .gra {
+      background: linear-gradient(to right, #8810F9 20%, #227FF7 100%);
+    }
+    header{
+        text-align: center;
+        font-size: 15vw;
+        font-family: bebas neue;
+        color: white;
+        width: 100%;
+        height: 36%;
+        color: black;
+        letter-spacing: 2vw;
+    }
+    .tag{
+        width: 100%;
+        height: 15%;
+        color: black;
+        font-family: "Corbel";
+        font-size: 1.5vw;
+        text-align: center;
+        letter-spacing: 0.61vw;
+    }
+    .form{
+        width: 100%;
+        height: 36%;
+        text-align: center;
+
+    }
+    .textbox{
+      border-top-left-radius: 16px;
+      border-bottom-left-radius: 16px;
+      border-bottom-right-radius: 16px;
+      border-top-right-radius: 16px;
+      border: 5px solid black;
+      background-color: black;
+      color: white;
+      width: 25%;
+      height: 18%;
+    }
+    .submit{
+      border-top-left-radius: 16px;
+      border-bottom-left-radius: 16px;
+      border-bottom-right-radius: 16px;
+      border-top-right-radius: 16px;
+      background-color: black;
+      color: white;
+      border: 5px solid black;
+      height: 16%;
+      width: 8%;
+
+
+    }
+    .st{
+        font-family:'Baloo 2';
+        font-size: 4vw;
+    }
+    @media only screen and (max-width:620px) {
+  /* For mobile phones: */
+     .tag{
+        width: 100%;
+        height: 15%;
+        color: black;
+        font-family: "Corbel";
+        font-size: 4.5vw;
+        text-align: center;
+        letter-spacing: 0vw;
+    }
+    header{
+        text-align: center;
+        font-size: 30vw;
+        font-family: bebas neue;
+        color: white;
+        width: 100%;
+        height: 18%;
+        padding-top: 30%;
+        color: black;
+        letter-spacing: 1.5vw;
+    }
+    .textbox{
+      border-top-left-radius: 16px;
+      border-bottom-left-radius: 16px;
+      border-bottom-right-radius: 16px;
+      border-top-right-radius: 16px;
+      border: 5px solid black;
+      background-color: black;
+      color: white;
+      width: 58%;
+      height: 13%;
+    }
+    .submit{
+        border-top-left-radius: 16px;
+      border-bottom-left-radius: 16px;
+      border-bottom-right-radius: 16px;
+      border-top-right-radius: 16px;
+      background-color: black;
+      color: white;
+      border: 5px solid black;
+      width: 21%;
+      height: 12%;
+    }
+    .st{
+        font-family:'Baloo 2';
+        font-size:5vw;
+    }
+     
+
+    }
+    </style>
+</head>
+<body class="gra">
+    <header>
+        COVID 19
+    </header>
+    <div class="tag">
+        #stayhome #staysafe
+    </div>
+    <div class="form">
+    <section>
+        <form method="post" action="test">
+            <b class="st">State Name</b><br>
+            <select class="textbox" name=state method="GET" action="/">
+                {% for state in states %}
+                <option value= "{{state}}" SELECTED>{{state}}</option>"
+                {% endfor %}
+                </select><br>
+                <br>
+                <input type="submit" class="submit">
+        </form>
+        
+    </section>
+    </div>
+    
+
+
+
+</body>
+</html>
