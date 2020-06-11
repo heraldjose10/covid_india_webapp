@@ -33,7 +33,7 @@ def test():
     if index==None:
         return app.send_static_file('response1.html')
     else:
-        return render_template('resnew v3.html', data=printout(index))
+        return render_template('resnew v4.html', data=printout(index))
     
        
 def dropdownmenu(data):

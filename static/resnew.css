@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Black Han Sans');
+@import url('https://fonts.googleapis.com/css?family=Bebas Neue');
+
+.sec1{
+    width: 45%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    float: left;
+    display:block;
+    overflow-y:hidden;
+    text-align: center;
+    height:100%;
+
+    visibility: visible;
+    position:relative;
+    
+}
+.sec2{
+    width: 55%;
+    background-color: rgb(0, 0, 0);
+    color:rgb(255, 255, 255) ;
+    float: left;
+    display:block;
+    overflow-y:hidden;
+    overflow-x: hidden;
+    text-align: center;
+    height:100%;
+  
+    visibility: visible;
+    position:relative;
+}
+
+
+.text{
+    font-size: 4vw;
+};
+
+.gra{
+    background: linear-gradient(90deg, rgb(255, 255, 255) 100%, rgba(0, 0, 0, 0) 100%);
+}
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  .center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  .center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  
+  .numbers{
+        color: rgb(255, 255, 255);
+        font-size: 15vw;
+        font-family: bebas neue;
+    }
+#num{
+    visibility: visible;
+}
+
+  .button{
+        background-color: white;
+        border: 0px solid transparent;
+        font-size: 4vw;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        font-family: monospace;
+        outline: none;
+    }
+    .button:hover{
+        font-family: Black Han Sans;
+        box-shadow: 0px 0px 0px transparent;
+        border: 0px solid transparent;
+        text-shadow: 0px 0px 0px transparent;
+    }
+    
+
+    
+
+  @media only screen and (min-width:620px) {
+  /* For desktop phones: */
+  .sec1{
+  width: 30%;
+}
+.sec2{
+  width: 70%;
+}
+.button{
+    font-size: 2vw;
+}
+.numbers{
+    font-size: 10vw;
+}
+}

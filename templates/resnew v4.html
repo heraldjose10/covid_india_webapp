@@ -1,0 +1,84 @@
+<htML>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='resnew.css')}}">
+        
+    </head>
+    <body class="gra">
+        <!--
+            FIRST SECTION HERE
+        -->
+        <section class="sec1">
+            <div class="center">
+            <button class='button' id='but1'>Total-Cases</button>
+            <br>
+            <br>
+            <button class='button' id='but2'>Active-Cases</button>
+            <br>
+            <br>
+            <button class='button' id='but3'>Deaths</button><br>
+            <br>
+            <button class='button' id='but4'>Recoveries</button>
+        </div>
+
+        </section>
+                   <!--
+                       SECOND SCETION HERE
+                   -->
+             <section class="sec2">
+                 <div class="scrolling-box">
+                     <div>            
+                 <section class="numbers" id="num">
+                    {{ data['total']}}
+                 </section>
+                 
+                 </div>
+                </div>
+
+             </section>
+             
+            <script>
+var active={{ data.active}};
+var total={{data.total}}
+var recovery={{data.recovery}}
+var deaths={{data.deaths}}
+document.getElementById('but1').addEventListener('click',clickhandle1,false);
+function clickhandle1(event){
+    document.getElementById('num').style.visibility='visible';
+    document.getElementById('num').textContent=total;
+    document.getElementById('but2').style.fontFamily='monospace'
+    document.getElementById('but3').style.fontFamily='monospace'
+    document.getElementById('but4').style.fontFamily='monospace'
+    document.getElementById('but1').style.fontFamily='Black Han Sans'
+}
+document.getElementById('but2').addEventListener('click',clickhandle2,false)
+function clickhandle2(event){
+    document.getElementById('num').style.visibility='visible';
+    document.getElementById('num').textContent=active;
+    document.getElementById('but1').style.fontFamily='monospace'
+    document.getElementById('but3').style.fontFamily='monospace'
+    document.getElementById('but4').style.fontFamily='monospace'
+    document.getElementById('but2').style.fontFamily='Black Han Sans'
+}
+document.getElementById('but3').addEventListener('click',clickhandle3,false);
+function clickhandle3(event){
+    document.getElementById('num').style.visibility='visible';
+    document.getElementById('num').textContent=deaths
+    document.getElementById('but2').style.fontFamily='monospace'
+    document.getElementById('but1').style.fontFamily='monospace'
+    document.getElementById('but4').style.fontFamily='monospace'
+    document.getElementById('but3').style.fontFamily='Black Han Sans'
+}
+document.getElementById('but4').addEventListener('click',clickhandle4,false);
+function clickhandle4(event){
+    document.getElementById('num').style.visibility='visible';
+    document.getElementById('num').textContent=recovery
+    document.getElementById('but2').style.fontFamily='monospace'
+    document.getElementById('but3').style.fontFamily='monospace'
+    document.getElementById('but1').style.fontFamily='monospace'
+    document.getElementById('but4').style.fontFamily='Black Han Sans'
+}
+            </script>
+
+    </body>
+</htML>
