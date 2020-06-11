@@ -18,7 +18,7 @@ app = Flask(__name__)
 def hello():
     data=directdata()
     drop=dropdownmenu(data)
-    return render_template('herald_test.html', states=sorted(drop.keys()))
+    return render_template('herald_test v1.html', states=sorted(drop.keys()))
 
 
 @app.route('/test', methods=['POST', 'GET'])

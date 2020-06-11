@@ -1,0 +1,36 @@
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <title>Covid-Tracker</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='homepage.css')}}" type="text/css">
+</head>
+<body class="gra">
+    <header>
+        Covid-Tracker
+    </header>
+    <div class="form">
+    <section>
+        <form method="post" action="test">
+          <br>
+            <select class="textbox" name=state method="GET" action="/">
+              <option value='none' selected disabled>Choose here</option>
+                {% for state in states %}
+                <option value= "{{state}}" SELECTED>{{state}}</option>"
+                {% endfor %}
+                </select><br>
+                <br>
+                <input type="submit" class="submit">
+        </form>
+        
+    </section>
+    </div>
+    <div class="mongograph">
+      <iframe class='res_iframe'style="background: black; border: none;"  src="https://charts.mongodb.com/charts-project-covid-nydww/embed/charts?id=ebdcc441-bf65-4113-ac61-d359e5e43bcd&theme=dark" allowfullscreen>
+      </iframe>
+  </div>
+    
+
+
+
+</body>
+</html>
