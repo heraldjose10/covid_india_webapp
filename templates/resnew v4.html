@@ -1,84 +1,72 @@
-<htML>
+<html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='resnew.css')}}">
-        
+        <title>Covid-Tracker</title>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='resnew.css')}}">        
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+        />
+        <script src="https://kit.fontawesome.com/84ec575040.js" crossorigin="anonymous"></script>
     </head>
-    <body class="gra">
-        <!--
-            FIRST SECTION HERE
-        -->
-        <section class="sec1">
-            <div class="center">
-            <button class='button' id='but1'>Total-Cases</button>
-            <br>
-            <br>
-            <button class='button' id='but2'>Active-Cases</button>
-            <br>
-            <br>
-            <button class='button' id='but3'>Deaths</button><br>
-            <br>
-            <button class='button' id='but4'>Recoveries</button>
-        </div>
-
-        </section>
-                   <!--
-                       SECOND SCETION HERE
-                   -->
-             <section class="sec2">
-                 <div class="scrolling-box">
-                     <div>            
-                 <section class="numbers" id="num">
-                    {{ data['total']}}
-                 </section>
-                 
-                 </div>
+    
+    <body>
+        <div class="parent">
+            <div class="header">
+                <div class="name">{{data.state}}</div>
+                <div class="tohome">
+                    <button class="home_button">
+                        <i class="fas fa-home fa-2x" id="icon1"></i>
+                    </button>
                 </div>
-
-             </section>
-             
-            <script>
-var active={{ data.active}};
-var total={{data.total}}
-var recovery={{data.recovery}}
-var deaths={{data.deaths}}
-document.getElementById('but1').addEventListener('click',clickhandle1,false);
-function clickhandle1(event){
-    document.getElementById('num').style.visibility='visible';
-    document.getElementById('num').textContent=total;
-    document.getElementById('but2').style.fontFamily='monospace'
-    document.getElementById('but3').style.fontFamily='monospace'
-    document.getElementById('but4').style.fontFamily='monospace'
-    document.getElementById('but1').style.fontFamily='Black Han Sans'
-}
-document.getElementById('but2').addEventListener('click',clickhandle2,false)
-function clickhandle2(event){
-    document.getElementById('num').style.visibility='visible';
-    document.getElementById('num').textContent=active;
-    document.getElementById('but1').style.fontFamily='monospace'
-    document.getElementById('but3').style.fontFamily='monospace'
-    document.getElementById('but4').style.fontFamily='monospace'
-    document.getElementById('but2').style.fontFamily='Black Han Sans'
-}
-document.getElementById('but3').addEventListener('click',clickhandle3,false);
-function clickhandle3(event){
-    document.getElementById('num').style.visibility='visible';
-    document.getElementById('num').textContent=deaths
-    document.getElementById('but2').style.fontFamily='monospace'
-    document.getElementById('but1').style.fontFamily='monospace'
-    document.getElementById('but4').style.fontFamily='monospace'
-    document.getElementById('but3').style.fontFamily='Black Han Sans'
-}
-document.getElementById('but4').addEventListener('click',clickhandle4,false);
-function clickhandle4(event){
-    document.getElementById('num').style.visibility='visible';
-    document.getElementById('num').textContent=recovery
-    document.getElementById('but2').style.fontFamily='monospace'
-    document.getElementById('but3').style.fontFamily='monospace'
-    document.getElementById('but1').style.fontFamily='monospace'
-    document.getElementById('but4').style.fontFamily='Black Han Sans'
-}
-            </script>
-
+                <div class="todark">
+                    <button class="darkmode">
+                        <i class="fas fa-sun fa-2x" id='icon'></i>
+                    </button>
+                </div>
+            </div>
+            <div class="category">
+                <div class="total">
+                    <button class="button_2" id="but1">
+                        <i class="fas fa-virus" id="virus"></i>
+                        <div class="tot" id="tot"> total cases </div> 
+                        <i class="fas fa-virus" id="virus1"></i>
+                    </button>
+                </div>
+                <div class="active">
+                    <button class="button_2" id="but2">
+                        <i class="fas fa-hospital" id="hospital"></i>
+                        <div class="act" id="act"> active cases </div>
+                        <i class="fas fa-virus" id="virus1"></i>
+                    </button>
+                </div>
+                <div class="deaths">
+                    <button class="button_2" id="but3">
+                        <i class="fas fa-dizzy" id="dizy"></i>
+                        <div class="dea" id="dea"> deaths </div>
+                        <i class="fas fa-virus" id="virus1"></i>
+                    </button>
+                </div>
+                <div class="recoveries">
+                    <button class="button_2" id="but4">
+                        <i class="fas fa-clipboard-check" id="check"></i>
+                        <div class="rec" id="rec"> recoveries </div>
+                        <i class="fas fa-virus" id="virus1"></i>   
+                    </button>
+                </div>
+            </div>
+            <div class="data">
+                <div class="data1" id="data1"></div>
+            </div>
+        </div>
     </body>
-</htML>
+    <script>
+        var active={{ data.active}};
+        var total={{data.total}};
+        var recovery={{data.recovery}};
+        var deaths={{data.deaths}};
+    </script>
+    <!-- <script src="{{url_for('static',filename='test.js')}}"></script> -->
+    <script src="{{url_for('static',filename='app.js')}}"></script>
+    <!-- <script src="{{url_for('static',filename='buttons.js')}}"></script> -->
+</html>

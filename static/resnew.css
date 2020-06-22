@@ -1,107 +1,328 @@
-@import url('https://fonts.googleapis.com/css?family=Black Han Sans');
-@import url('https://fonts.googleapis.com/css?family=Bebas Neue');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,600;1,400;1,600&family=Roboto+Condensed:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
+body{
+    overflow: hidden;
+}
+::-webkit-scrollbar {
+    width: 1px;
+  }
+  ::-webkit-scrollbar-button{
+      display: none;
+  }
+  ::-webkit-scrollbar-thumb{
+      display: none;
+  }
+  ::-webkit-scrollbar-track{
+      display: none;
+  }
 
-.sec1{
-    width: 45%;
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    float: left;
-    display:block;
-    overflow-y:hidden;
-    text-align: center;
-    height:100%;
+*{
+    padding: 0;
+    margin: 0;
+}
 
-    visibility: visible;
-    position:relative;
+.parent{
+    position: relative;
+    border:none;
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    color: white;
+}
+.header{
+    position: absolute;
+    width: 100vw;
+    height: 6vh;
+    left: 0vw;
+    background-color: white;
+}
+.tohome{
+    position: absolute;
+    width: 15vw;
+    height: 6vh;
+    background-color: transparent;
+    left: 70vw;
+}
+.home_button{
+    position: absolute;
+    width: 15vw;
+    height: 6vh;
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+#icon1{
+    font-size: 5vh;
+}
+.todark{
+    position: absolute;
+    width: 15vw;
+    height: 6vh;
+    background-color: transparent;
+    left: 85vw;
+}
+.darkmode{
+    position: absolute;
+    width: 15vw;
+    height: 6vh;
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+#icon{
+    font-size: 5vh;
+    color: black;
+}
+.name{
+    position: absolute;
+    width: 45vw;
+    height: 6vh;
+    background-color: transparent;
+    left: 4vw;
+    color: black;
+    font-family: 'Roboto Condensed';
+    text-decoration: none;
+    font-size: 4vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.category{
+    position: absolute;
+    width: 100vw;
+    height: 40vh;
+    top: 6vh;
+    background-color: transparent;
+}
+.button_2{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    position: absolute;
+    width: 60vw;
+    height: 6vh;
+    font-size: 3vh;
+    left: 20vw;
+    top: 1vh;
+    display: flex;
+    justify-content: center;
+}
+#virus{
+    visibility: hidden;
+    font-size: 4vh;
+    padding-top: 1vh;
+    color: white;
+}
+#virus1{
+    visibility: hidden;
+    font-size: 4vh;
+    padding-top: 1vh;
     
 }
-.sec2{
-    width: 55%;
-    background-color: rgb(0, 0, 0);
-    color:rgb(255, 255, 255) ;
-    float: left;
-    display:block;
-    overflow-y:hidden;
-    overflow-x: hidden;
-    text-align: center;
-    height:100%;
-  
-    visibility: visible;
-    position:relative;
+#hospital{
+    visibility: hidden;
+    color: white;
+    font-size: 4vh;
+    padding-top: 1vh;
 }
-
-
-.text{
-    font-size: 4vw;
-};
-
-.gra{
-    background: linear-gradient(90deg, rgb(255, 255, 255) 100%, rgba(0, 0, 0, 0) 100%);
+#dizy{
+    visibility: hidden;
+    color: white;
+    font-size: 4vh;
+    padding-top: 1vh;
 }
-section {
+#check{
+    visibility: hidden;
+    color: white;
+    font-size: 4vh;
+    padding-top: 1vh;
+}
+.tot{
+    font-family: 'IBM Plex Sans';
+    font-weight: 400;
+    font-size: 3vh;
+    padding-top: 1vh;
+    color: white;
+    align-self: center;
+}
+.act{
+    font-family: 'IBM Plex Sans';
+    font-weight: 300;
+    font-size: 3vh;
+    padding-top: 1vh;
+    color: white;
+}
+.dea{
+    font-family: 'IBM Plex Sans';
+    font-size: 3vh;
+    padding-top: 1vh;
+    color: white;
+    font-weight: 400;
+}
+.rec{
+    font-family: 'IBM Plex Sans';
+    font-weight: 400;
+    font-size: 3vh;
+    padding-top: 1vh;
+    color: white;
+}
+.total{
+    position: absolute;
+    top: 6vh;
+    background-color: transparent;
+    width: 100vw;
+    height: 8vh;
+
+}
+.active{
+    position: absolute;
+    top: 16vh;
+    background-color: transparent;
+    width: 100vw;
+    height: 8vh;
+}
+.deaths{
+    position: absolute;
+    top: 26vh;
+    background-color: transparent;
+    width: 100vw;
+    height: 8vh;
+
+}
+.recoveries{
+    position: absolute;
+    top: 36vh;
+    background-color: transparent;
+    width: 100vw;
+    height: 8vh;
+}
+.data{
+    position: absolute;
+    display: flex;
+    width: 100vw;
+    height: 40vh;
+    top: 46vh;
+    background-color: transparent;
+    justify-content: center;
+}
+.data1{
+    position: absolute;
+    background-color: transparent;
+    font-size: 10vh;
     display: flex;
     align-items: center;
+    align-content: center;
+    align-self: center;
+    width: 90vw;
     justify-content: center;
-    height: 100%;
-  }
-  
-  .center {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-  }
-  .center {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-  }
-  
-  .numbers{
-        color: rgb(255, 255, 255);
-        font-size: 15vw;
-        font-family: bebas neue;
+    visibility: hidden;
+}
+@media only screen and (min-width:620px) {
+    .category{
+        position: absolute;
+        left: 0;
+        top: 6vh;
+        height: 94vh;
+        width: 45vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
-#num{
-    visibility: visible;
-}
-
-  .button{
-        background-color: white;
-        border: 0px solid transparent;
-        font-size: 4vw;
-        color: rgb(0, 0, 0);
-        text-decoration: none;
-        font-family: monospace;
-        outline: none;
+    .data{
+        position: absolute;
+        right: 0;
+        top: 6vh;
+        height: 94vh;
+        width: 55vw;
+        
     }
-    .button:hover{
-        font-family: Black Han Sans;
-        box-shadow: 0px 0px 0px transparent;
-        border: 0px solid transparent;
-        text-shadow: 0px 0px 0px transparent;
+    .total{
+        top: 10vh;
+        width: 45vw;
+        height: 10vh;
     }
-    
-
-    
-
-  @media only screen and (min-width:620px) {
-  /* For desktop phones: */
-  .sec1{
-  width: 30%;
-}
-.sec2{
-  width: 70%;
-}
-.button{
-    font-size: 2vw;
-}
-.numbers{
-    font-size: 10vw;
-}
-}
+    .active{
+        top: 25vh;
+        width: 45vw;
+        height: 10vh;
+    }
+    .deaths{
+        top: 40vh;
+        width: 45vw;
+        height: 10vh;
+    }
+    .recoveries{
+        top: 55vh;
+        width: 45vw;
+        height: 10vh;
+    }
+    .button_2{
+        left: 4vw;
+        width: 30vw;
+        height: 8vh;
+        display: flex;
+        justify-content: left;
+        /* justify-content: unset; */
+        
+    }
+    .tot{
+        position: absolute;
+        left: 4vw;
+        visibility: visible;
+        font-size: 4vh;
+    }
+    .act{
+        position: absolute;
+        left: 4vw;
+        visibility: visible;
+        font-size: 4vh;
+    }
+    .dea{
+        position: absolute;
+        left: 4vw;
+        visibility: visible;
+        font-size: 4vh;
+    }
+    .rec{
+        position: absolute;
+        left: 4vw;
+        visibility: visible;
+        font-size: 4vh;
+    }
+    #virus{
+        visibility: visible;
+        padding-top: 2vh;
+    }
+    #hospital{
+        visibility: visible;
+        padding-top: 2vh;
+    }
+    #dizy{
+        visibility: visible;
+        padding-top: 2vh;
+    }
+    #check{
+        visibility: visible;
+        padding-top: 2vh;
+    }
+    .data1{
+        width: 55vw;
+        font-size: 20vh;
+    }
+    .tohome{
+        width: 5vw;
+        left: 90vw;
+    }
+    .todark{
+        width: 5vw;
+        left: 95vw;
+    }
+    .darkmode{
+        width: 5vw;
+    }
+    .home_button{
+        width: 5vw;
+    }
+};
+/* add another set of text over this
+to make it appear wwhen clicked */
