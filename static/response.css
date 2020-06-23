@@ -53,6 +53,7 @@ body{
 }
 #icon1{
     font-size: 5vh;
+    color: black;
 }
 .todark{
     position: absolute;
@@ -61,7 +62,7 @@ body{
     background-color: transparent;
     left: 85vw;
 }
-.darkmode{
+#darkmode{
     position: absolute;
     width: 15vw;
     height: 6vh;
@@ -69,9 +70,22 @@ body{
     outline: none;
     border: none;
 }
+#darkmode2{
+    position: absolute;
+    width: 15vw;
+    height: 6vh;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    visibility: hidden;
+}
 #icon{
     font-size: 5vh;
     color: black;
+}
+#icondark{
+    font-size: 5vh;
+    color: white;
 }
 .name{
     position: absolute;
@@ -317,7 +331,10 @@ body{
         width: 5vw;
         left: 95vw;
     }
-    .darkmode{
+    #darkmode{
+        width: 5vw;
+    }
+    #darkmode2{
         width: 5vw;
     }
     .home_button{
