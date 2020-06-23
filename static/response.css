@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,600;1,400;1,600&family=Roboto+Condensed:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
+body{
+    overflow: hidden;
+}
+::-webkit-scrollbar {
+    width: 1px;
+  }
+  ::-webkit-scrollbar-button{
+      display: none;
+  }
+  ::-webkit-scrollbar-thumb{
+      display: none;
+  }
+  ::-webkit-scrollbar-track{
+      display: none;
+  }
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.parent{
+    position: relative;
+    border:none;
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    color: white;
+}
+.header{
+    position: absolute;
+    width: 100vw;
+    height: 6vh;
+    left: 0vw;
+    background-color: white;
+}
+.tohome{
+    position: absolute;
+    width: 15vw;
+    height: 6vh;
+    background-color: transparent;
+    left: 70vw;
+}
+.home_button{
+    position: absolute;
+    width: 15vw;
+    height: 6vh;
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+#icon1{
+    font-size: 5vh;
+    color: black;
+}
+.todark{
+    position: absolute;
+    width: 15vw;
+    height: 6vh;
+    background-color: transparent;
+    left: 85vw;
+}
+#darkmode{
+    position: absolute;
+    width: 15vw;
+    height: 6vh;
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+#darkmode2{
+    position: absolute;
+    width: 15vw;
+    height: 6vh;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    visibility: hidden;
+}
+#icon{
+    font-size: 5vh;
+    color: black;
+}
+#icondark{
+    font-size: 5vh;
+    color: white;
+}
+.name{
+    position: absolute;
+    width: 45vw;
+    height: 6vh;
+    background-color: transparent;
+    left: 4vw;
+    color: black;
+    font-family: 'Roboto Condensed';
+    text-decoration: none;
+    font-size: 4vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.category{
+    position: absolute;
+    width: 100vw;
+    height: 40vh;
+    top: 6vh;
+    background-color: transparent;
+}
+.button_2{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    position: absolute;
+    width: 60vw;
+    height: 6vh;
+    font-size: 3vh;
+    left: 20vw;
+    top: 1vh;
+    display: flex;
+    justify-content: center;
+}
+#virus{
+    visibility: hidden;
+    font-size: 4vh;
+    padding-top: 1vh;
+    color: white;
+}
+#virus1{
+    visibility: hidden;
+    font-size: 4vh;
+    padding-top: 1vh;
+    
+}
+#hospital{
+    visibility: hidden;
+    color: white;
+    font-size: 4vh;
+    padding-top: 1vh;
+}
+#dizy{
+    visibility: hidden;
+    color: white;
+    font-size: 4vh;
+    padding-top: 1vh;
+}
+#check{
+    visibility: hidden;
+    color: white;
+    font-size: 4vh;
+    padding-top: 1vh;
+}
+.tot{
+    font-family: 'IBM Plex Sans';
+    font-weight: 400;
+    font-size: 3vh;
+    padding-top: 1vh;
+    color: white;
+    align-self: center;
+}
+.act{
+    font-family: 'IBM Plex Sans';
+    font-weight: 300;
+    font-size: 3vh;
+    padding-top: 1vh;
+    color: white;
+}
+.dea{
+    font-family: 'IBM Plex Sans';
+    font-size: 3vh;
+    padding-top: 1vh;
+    color: white;
+    font-weight: 400;
+}
+.rec{
+    font-family: 'IBM Plex Sans';
+    font-weight: 400;
+    font-size: 3vh;
+    padding-top: 1vh;
+    color: white;
+}
+.total{
+    position: absolute;
+    top: 6vh;
+    background-color: transparent;
+    width: 100vw;
+    height: 8vh;
+
+}
+.active{
+    position: absolute;
+    top: 16vh;
+    background-color: transparent;
+    width: 100vw;
+    height: 8vh;
+}
+.deaths{
+    position: absolute;
+    top: 26vh;
+    background-color: transparent;
+    width: 100vw;
+    height: 8vh;
+
+}
+.recoveries{
+    position: absolute;
+    top: 36vh;
+    background-color: transparent;
+    width: 100vw;
+    height: 8vh;
+}
+.data{
+    position: absolute;
+    display: flex;
+    width: 100vw;
+    height: 40vh;
+    top: 46vh;
+    background-color: transparent;
+    justify-content: center;
+}
+.data1{
+    position: absolute;
+    background-color: transparent;
+    font-size: 10vh;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    width: 90vw;
+    justify-content: center;
+    visibility: hidden;
+}
+@media only screen and (min-width:620px) {
+    .category{
+        position: absolute;
+        left: 0;
+        top: 6vh;
+        height: 94vh;
+        width: 45vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .data{
+        position: absolute;
+        right: 0;
+        top: 6vh;
+        height: 94vh;
+        width: 55vw;
+        
+    }
+    .total{
+        top: 10vh;
+        width: 45vw;
+        height: 10vh;
+    }
+    .active{
+        top: 25vh;
+        width: 45vw;
+        height: 10vh;
+    }
+    .deaths{
+        top: 40vh;
+        width: 45vw;
+        height: 10vh;
+    }
+    .recoveries{
+        top: 55vh;
+        width: 45vw;
+        height: 10vh;
+    }
+    .button_2{
+        left: 4vw;
+        width: 30vw;
+        height: 8vh;
+        display: flex;
+        justify-content: left;
+        /* justify-content: unset; */
+        
+    }
+    .tot{
+        position: absolute;
+        left: 4vw;
+        visibility: visible;
+        font-size: 4vh;
+    }
+    .act{
+        position: absolute;
+        left: 4vw;
+        visibility: visible;
+        font-size: 4vh;
+    }
+    .dea{
+        position: absolute;
+        left: 4vw;
+        visibility: visible;
+        font-size: 4vh;
+    }
+    .rec{
+        position: absolute;
+        left: 4vw;
+        visibility: visible;
+        font-size: 4vh;
+    }
+    #virus{
+        visibility: visible;
+        padding-top: 2vh;
+    }
+    #hospital{
+        visibility: visible;
+        padding-top: 2vh;
+    }
+    #dizy{
+        visibility: visible;
+        padding-top: 2vh;
+    }
+    #check{
+        visibility: visible;
+        padding-top: 2vh;
+    }
+    .data1{
+        width: 55vw;
+        font-size: 20vh;
+    }
+    .tohome{
+        width: 5vw;
+        left: 90vw;
+    }
+    .todark{
+        width: 5vw;
+        left: 95vw;
+    }
+    #darkmode{
+        width: 5vw;
+    }
+    #darkmode2{
+        width: 5vw;
+    }
+    .home_button{
+        width: 5vw;
+    }
+};
+/* add another set of text over this
+to make it appear wwhen clicked */

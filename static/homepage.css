@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css?family=Bebas Neue');
+@import url('https://fonts.googleapis.com/css?family=Baloo 2');
+::-webkit-scrollbar {
+    width: 1px;
+  }
+  ::-webkit-scrollbar-button{
+      display: none;
+  }
+  ::-webkit-scrollbar-thumb{
+      color: white;
+  }
+  ::-webkit-scrollbar-track{
+      color: white;
+  }
+.gra {
+    z-index: 1;
+    background: black;
+      }
+  header{
+      text-align: center;
+      font-size: 6vw;
+      margin-top: 12%;
+      font-family: bebas neue;
+      color: white;
+      width: 100%;
+      height: 10%;
+      letter-spacing: 1vw;
+      z-index: 1;
+  }
+  #dark1{
+    position: absolute;
+    background-color: black;
+    border: none;
+    outline: none;
+    color: white;
+    left: 96.5vw;
+    top: 1vh;
+    z-index: -1;
+  }
+  #dark2{
+    position: absolute;
+    background-color: white;
+    border: none;
+    outline: none;
+    color: black;
+    left: 96.5vw;
+    top: 1vh;
+    z-index: -1;    
+    visibility: hidden;
+  }
+  .form{
+      width: 100%;
+      height: 36%;
+      text-align: center;
+      margin-top: 3%;
+      z-index: 1;
+  }
+  .textbox{
+    background-color: black;
+    color: white;
+    width: 50%;
+    height: 18%;
+    outline: none;
+    font-size: 2vw;
+    font-family: "Corbel";
+    border: 1px solid white;
+  }
+  .submit{
+    background-color: black;
+    color: white;
+    width: 50vh;
+    border: 1px solid white;
+    height: 16%;
+    width: 8%;
+    outline: none;
+    font-size: 2vw;
+    font-family: "Corbel";
+  }
+  .mongograph{
+    margin-top: 15%;
+    /* position: relative; */
+    overflow: hidden;
+    width: 100%;
+    padding-top: 45%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */     
+  }
+  .res_iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+
+  }
+  .submit:hover{
+    background-color: white;
+    color: black;
+    opacity: 1.0;
+    transition: .3s;
+  }
+  
+
+  @media only screen and (max-width:620px) {
+/* For mobile phones: */
+
+  header{
+      text-align: center;
+      font-size: 15vw;
+      font-family: bebas neue;
+      color: white;
+      width: 100%;
+      height: 8%;
+      padding-top: 40%;
+      color: white;
+      letter-spacing: 1.5vw;
+      z-index: 1;
+  }
+  .textbox{
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+    width: 70%;
+    height: 15%;
+    outline: none;
+    font-size: 6vw;
+    z-index: 1;
+  }
+  .submit{
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    width: 50%;
+    height: 15%;
+    outline: none;
+    font-size: 6vw;
+  }
+  .mongograph{
+    display: none;
+      
+  }
+  .res_iframe{
+    display: none;
+
+  }
+  .submit:hover{
+    background-color: white;
+    color: black;
+    opacity: 1.0;
+    transition: .3s;
+  }
+#dark1{
+  left: 86vw;
+  top: 1vh;
+}
+#dark2{
+  left: 86vw;
+  top: 1vh;
+}
+  }

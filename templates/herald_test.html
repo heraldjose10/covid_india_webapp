@@ -1,0 +1,172 @@
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <title>Covid-Tracker</title>
+  <link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Baloo 2' rel='stylesheet'>
+    <style>
+        .gra {
+      background: black
+        }
+    header{
+        text-align: center;
+        font-size: 15vw;
+        font-family: bebas neue;
+        color: white;
+        width: 100%;
+        height: 36%;
+        color: white;
+        letter-spacing: 2vw;
+    }
+    .tag{
+        width: 100%;
+        height: 15%;
+        color: white;
+        font-family: "Corbel";
+        font-size: 1.5vw;
+        text-align: center;
+        letter-spacing: 0.61vw;
+    }
+    .form{
+        width: 100%;
+        height: 36%;
+        text-align: center;
+
+    }
+    .textbox{
+      border-top-left-radius: 16px;
+      border-bottom-left-radius: 16px;
+      border-bottom-right-radius: 16px;
+      border-top-right-radius: 16px;
+      border: 5px solid white;
+      background-color: white;
+      color: black;
+      width: 25%;
+      height: 18%;
+    }
+    .submit{
+      border-top-left-radius: 16px;
+      border-bottom-left-radius: 16px;
+      border-bottom-right-radius: 16px;
+      border-top-right-radius: 16px;
+      background-color: white;
+      color: black;
+      border: 5px solid white;
+      height: 16%;
+      width: 8%;
+
+
+    }
+    .st{
+        font-family:'Baloo 2';
+        font-size: 4vw;
+    }
+    .mongograph{
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      padding-top: 45.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+        
+    }
+    .res_iframe{
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+
+    }
+    @media only screen and (max-width:620px) {
+  /* For mobile phones: */
+     .tag{
+        width: 100%;
+        height: 15%;
+        color: white;
+        font-family: "Corbel";
+        font-size: 4.5vw;
+        text-align: center;
+        letter-spacing: 0vw;
+    }
+    header{
+        text-align: center;
+        font-size: 30vw;
+        font-family: bebas neue;
+        color: white;
+        width: 100%;
+        height: 18%;
+        padding-top: 30%;
+        color: white;
+        letter-spacing: 1.5vw;
+    }
+    .textbox{
+      border-top-left-radius: 16px;
+      border-bottom-left-radius: 16px;
+      border-bottom-right-radius: 16px;
+      border-top-right-radius: 16px;
+      border: 5px solid white;
+      background-color: white;
+      color: black;
+      width: 58%;
+      height: 13%;
+    }
+    .submit{
+        border-top-left-radius: 16px;
+      border-bottom-left-radius: 16px;
+      border-bottom-right-radius: 16px;
+      border-top-right-radius: 16px;
+      background-color: white;
+      color: black;
+      border: 5px solid white;
+      width: 21%;
+      height: 12%;
+    }
+    .st{
+        font-family:'Baloo 2';
+        font-size:5vw;
+    }
+    .mongograph{
+      display: none;
+        
+    }
+    .res_iframe{
+      display: none;
+
+    }
+
+    }
+    </style>
+</head>
+<body class="gra">
+    <header>
+        COVID 19
+    </header>
+    <div class="tag">
+        #stayhome #staysafe
+    </div>
+    <div class="form">
+    <section>
+        <form method="post" action="test">
+            <b class="st">State Name</b><br>
+            <select class="textbox" name=state method="GET" action="/">
+                {% for state in states %}
+                <option value= "{{state}}" SELECTED>{{state}}</option>"
+                {% endfor %}
+                </select><br>
+                <br>
+                <input type="submit" class="submit">
+        </form>
+        
+    </section>
+    </div>
+    <div class="mongograph">
+      <iframe class='res_iframe'style="background: black; border: none;"  src="https://charts.mongodb.com/charts-project-covid-nydww/embed/charts?id=ebdcc441-bf65-4113-ac61-d359e5e43bcd&theme=dark" allowfullscreen>
+      </iframe>
+  </div>
+    
+
+
+
+</body>
+</html>

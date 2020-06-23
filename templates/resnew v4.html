@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>Covid-Tracker</title>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='response.css')}}">        
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+        />
+        <script src="https://kit.fontawesome.com/84ec575040.js" crossorigin="anonymous"></script>
+    </head>
+    
+    <body>
+        <div class="parent" id="bg">
+            <div class="header" id="head1">
+                <div class="name" id='statename'>{{data.state}}</div>
+                <a class="tohome" href="https://covid-india-webapp.herokuapp.com/">
+                    <button class="home_button" >
+                        <i class="fas fa-home fa-2x" id="icon1"></i>
+                    </button>
+                </a>
+                <div class="todark">
+                    <button id="darkmode">
+                        <i class="fas fa-sun fa-2x" id='icon'></i>
+                    </button>
+                    <button id="darkmode2" id="dark2">
+                        <i class="fas fa-moon fa-3x" id="icondark"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="category">
+                <div class="total">
+                    <button class="button_2" id="but1">
+                        <i class="fas fa-virus" id="virus"></i>
+                        <div class="tot" id="tot"> total cases </div> 
+                        <i class="fas fa-virus" id="virus1"></i>
+                    </button>
+                </div>
+                <div class="active">
+                    <button class="button_2" id="but2">
+                        <i class="fas fa-hospital" id="hospital"></i>
+                        <div class="act" id="act"> active cases </div>
+                        <i class="fas fa-virus" id="virus1"></i>
+                    </button>
+                </div>
+                <div class="deaths">
+                    <button class="button_2" id="but3">
+                        <i class="fas fa-dizzy" id="dizy"></i>
+                        <div class="dea" id="dea"> deaths </div>
+                        <i class="fas fa-virus" id="virus1"></i>
+                    </button>
+                </div>
+                <div class="recoveries">
+                    <button class="button_2" id="but4">
+                        <i class="fas fa-clipboard-check" id="check"></i>
+                        <div class="rec" id="rec"> recoveries </div>
+                        <i class="fas fa-virus" id="virus1"></i>   
+                    </button>
+                </div>
+            </div>
+            <div class="data">
+                <div class="data1" id="data1"></div>
+            </div>
+        </div>
+    </body>
+    <script>
+        var active={{ data.active}};
+        var total={{data.total}};
+        var recovery={{data.recovery}};
+        var deaths={{data.deaths}};
+    </script>
+    <script src="{{url_for('static',filename='test.js')}}"></script>
+    <script src="{{url_for('static',filename='app.js')}}"></script>
+    <!-- <script src="{{url_for('static',filename='buttons.js')}}"></script> -->
+</html>
