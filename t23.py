@@ -14,8 +14,8 @@ def hello():
     client=MongoClient("mongodb://heraldjose10:9400840572@covid-shard-00-00-9pl1n.mongodb.net:27017,covid-shard-00-01-9pl1n.mongodb.net:27017,covid-shard-00-02-9pl1n.mongodb.net:27017/covid?ssl=true&replicaSet=Covid-shard-0&authSource=admin&retryWrites=true&w=majority")
     db=client.covid
     data1,d2=get_data()
-    update_data(db,data1)
-    cumulative_update(db,d2)
+    #update_data(db,data1)
+    #cumulative_update(db,d2)
     data=directdata()
     drop=dropdownmenu(data)
     return render_template('herald_test v1.html', states=sorted(drop.keys()))
@@ -107,3 +107,7 @@ def cumulative_update(db,list1):
             pass
         else:
             db.cumulative.insert_one(input1)
+
+@app.route('/about')
+def about():
+    return app.send_static_file('response1.html')
