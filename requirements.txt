@@ -1,5 +1,5 @@
 Flask==1.1.1
-requests==2.22.0
+requests==2.31.0
 urllib3==1.26.5
 beautifulsoup4==4.8.0
 json5==0.8.5
